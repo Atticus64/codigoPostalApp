@@ -19,7 +19,19 @@ Se puede hacer de 2 maneras
 1. Dando db click al archivo `codigoPostalApp.sln`  
 2. Abriendo el proyecto desde Visual Studio como proyecto o solución
 
-### 3. Agregar cambios al diseño y código
+### 3. Descargar archivos de codigos postales
+
+> Ejecutar en powershell
+
+```pwsh
+Invoke-WebRequest -OutFile codigos_postales.txt -Uri https://www.correosdemexico.gob.mx/datosabiertos/cp/cpdescarga.txt
+```
+
+El archivo descargado `codigos_postales` moverlo a la carpeta del proyecto 
+o si se hizo el comando en la carpeta del proyecto no hay problema
+tiene el path que lucir algo así `C:\Users\pathToProyect\CodigoPostalApp\codigos_postales.txt`
+
+### 4. Agregar cambios al diseño y código
 
 1. Agregar cambios
 
