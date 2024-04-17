@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "codigoPostalApp", "codigoPostalApp.vbproj", "{4AF0C2F6-39A2-4065-B896-44302365841C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AF0C2F6-39A2-4065-B896-44302365841C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF0C2F6-39A2-4065-B896-44302365841C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF0C2F6-39A2-4065-B896-44302365841C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF0C2F6-39A2-4065-B896-44302365841C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF908145-D054-46BE-99C1-102C2A84E3CB}
+	EndGlobalSection
+EndGlobal
