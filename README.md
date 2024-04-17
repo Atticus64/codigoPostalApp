@@ -12,16 +12,16 @@ y apartir de ese dato
 git clone https://github.com/Atticus64/codigoPostalApp.git
 ```
 
-2. Abrir el proyecto con Visual Studio 
+### 2. Abrir el proyecto con Visual Studio 
 
 Se puede hacer de 2 maneras 
 
-* Dando db click al archivo `codigoPostalApp.sln`  
-* Abriendo el proyecto desde Visual Studio como proyecto o solución
+1. Dando db click al archivo `codigoPostalApp.sln`  
+2. Abriendo el proyecto desde Visual Studio como proyecto o solución
 
-3. Agregar cambios al diseño y código
+### 3. Agregar cambios al diseño y código
 
-* Agregar cambios
+1. Agregar cambios
 
 ```bash
 git add . # si se quiere agregar todos los cambios
@@ -31,7 +31,7 @@ git add folder/
 # si se quiere agregar los cambios de una carpeta
 ```
 
-* Guardar los cambios en git
+2. Guardar los cambios en git
 
 ```bash
 # git commit -m "Mensaje de los cambios"
@@ -44,21 +44,26 @@ git commit -m "feat: Agregar boton de salir"
 # docs: -> Agregar documentacion
 ```
 
-* Subir los cambios
+3. Subir los cambios
 
 > [!NOTE]
 > Debe estar configurado el correo y usuario de git en el proyecto o equipo
 
-* Configuración
+4. Configuración
 
 ```bash
 git config user.email "tuemail@gmail.com"
 git config user.name "tuNombre"
 ```
 
-* Subir al repositorio remoto
+5. Subir al repositorio remoto
 
 ```bash
 git push 
 ```
+
+> [!NOTE]
+> Muy probablemente te pida que verifiques con un token
+> Ese se genera en tu perfil de github (solo colaboradores)
+
 
