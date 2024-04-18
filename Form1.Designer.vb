@@ -31,14 +31,14 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(17, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 16)
+        Me.Label1.Size = New System.Drawing.Size(125, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Fecha de hoy ->"
+        Me.Label1.Text = "La Fecha de hoy es"
         '
         'fechaTxt
         '
         Me.fechaTxt.AutoSize = True
-        Me.fechaTxt.Location = New System.Drawing.Point(128, 18)
+        Me.fechaTxt.Location = New System.Drawing.Point(161, 16)
         Me.fechaTxt.Name = "fechaTxt"
         Me.fechaTxt.Size = New System.Drawing.Size(70, 16)
         Me.fechaTxt.TabIndex = 1

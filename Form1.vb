@@ -35,6 +35,8 @@ Public Class Form1
         End If
 
 
+        MsgBox("Hola mundo")
+
 
     End Sub
 End Class
