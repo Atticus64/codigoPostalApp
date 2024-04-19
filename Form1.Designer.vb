@@ -24,6 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.fechaTxt = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.codPost = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,11 +46,29 @@ Partial Class Form1
         Me.fechaTxt.TabIndex = 1
         Me.fechaTxt.Text = "_________"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(20, 109)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(172, 68)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'codPost
+        '
+        Me.codPost.Location = New System.Drawing.Point(22, 59)
+        Me.codPost.Name = "codPost"
+        Me.codPost.Size = New System.Drawing.Size(110, 22)
+        Me.codPost.TabIndex = 3
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.codPost)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.fechaTxt)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
@@ -60,4 +80,6 @@ Partial Class Form1
 
     Friend WithEvents Label1 As Label
     Friend WithEvents fechaTxt As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents codPost As TextBox
 End Class
