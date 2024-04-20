@@ -82,6 +82,7 @@ Public Class Form1
         cod = codPost.Text
 
 
+        MsgBox(cod)
         Dim collection = zonas.FindAll(Function(z) z.cod_postal = cod)
 
         For Each item In collection
