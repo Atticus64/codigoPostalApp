@@ -59,6 +59,7 @@ Public Class Form1
                     Continue For
                 End If
 
+
                 Dim zone = New Zona With {
                     .cod_postal = props(0).Trim,
                     .asenta = props(1).Trim,
@@ -68,6 +69,7 @@ Public Class Form1
                     .ciudad = props(5).Trim
                 }
 
+
                 zonas.Add(zone)
             Next
         End If
@@ -75,33 +77,85 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    Sub AgregarUnicos(lista As ComboBox.ObjectCollection, elem As String)
+
+        Dim found = False
+
+        For Each e In lista
+            If e = elem Then
+                found = True
+            End If
+        Next
+
+        If Not found Then
+            lista.Add(elem)
+        End If
+    End Sub
+
+
+    Sub AgregarZona(z As Zona)
+
+        AgregarUnicos(estadoBox.Items, z.estado)
+        AgregarUnicos(MunicipioBox.Items, z.mun)
+        AgregarUnicos(AsentamientoBox.Items, z.asenta)
+        AgregarUnicos(TipAsentaBox.Items, z.tipo_asenta)
+        AgregarUnicos(CiudadBox.Items, z.ciudad)
+    End Sub
+
+    Sub LimpiarBoxes()
+        estadoBox.Items.Clear()
+        MunicipioBox.Items.Clear()
+        AsentamientoBox.Items.Clear()
+        TipAsentaBox.Items.Clear()
+        CiudadBox.Items.Clear()
+    End Sub
+
+    Sub DatosPorDefecto()
+        estadoBox.Text = estadoBox.Items(0)
+        MunicipioBox.Text = MunicipioBox.Items(0)
+        CiudadBox.Text = CiudadBox.Items(0)
+        AsentamientoBox.Text = AsentamientoBox.Items(0)
+        TipAsentaBox.Text = TipAsentaBox.Items(0)
+    End Sub
+
+
+    Private Sub BuscarCp()
 
         Dim cod As String
 
-        cod = codPost.Text
+        cod = CodPost.Text
 
+        Dim coincidences = zonas.FindAll(
+            Function(z) z.cod_postal = cod
+        )
 
-        MsgBox(cod)
-        Dim collection = zonas.FindAll(Function(z) z.cod_postal = cod)
+        If (coincidences.Count = 0) Then
+            MsgBox("Codigo postal no encontrado", MsgBoxStyle.Exclamation)
+            Return
+        End If
 
-        For Each item In collection
-            item.Show()
+        LimpiarBoxes()
+        For Each z In coincidences
+            AgregarZona(z)
         Next
 
+        DatosPorDefecto()
 
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub codPost_TextChanged(sender As Object, e As EventArgs) Handles CodPost.TextChanged
+
+        If Not CodPost.Text.Length = 5 Then
+            Return
+        End If
+
+        BuscarCp()
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         End
-    End Sub
-
-    Private Sub name_TextChanged(sender As Object, e As EventArgs) Handles names.TextChanged
-
     End Sub
 End Class
